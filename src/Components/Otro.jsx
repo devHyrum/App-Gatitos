@@ -1,12 +1,7 @@
-import { useCatImage } from '../Hooks/useCatImage.jsx'
+import { useCatImage } from "../Hooks/useCatImage.jsx";
 
-export function Otro () {
-  const { imageUrl } = useCatImage({ fact: 'cat' })
-  console.log(imageUrl)
+export function Otro() {
+  const { imageUrl } = useCatImage({ fact: "cat" });
 
-  return (
-    <>
-      {imageUrl && <img src={imageUrl} />}
-    </>
-  )
+  return <>{imageUrl && <img src={imageUrl} />}</>;
 }
