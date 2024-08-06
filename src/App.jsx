@@ -2,7 +2,7 @@ import { useCatImage } from "./Hooks/useCatImage.jsx";
 import { useCatFact } from "./Hooks/useCatFact.jsx";
 import "./index.css";
 import { useState, useEffect } from "react";
-import { Button, Spinner } from "flowbite-react";
+import { Button, Spinner, Datepicker } from "flowbite-react";
 
 export function App() {
   const { fact, refreshFact } = useCatFact();
@@ -15,7 +15,7 @@ export function App() {
       if (fact && imageUrl) {
         setLoading(false);
       }
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [fact, imageUrl]);
@@ -26,21 +26,20 @@ export function App() {
   };
 
   return (
-    <main className="m-5 font-[Montserrat] border-2 border-gray p-3 rounded-2xl shadow-2xl place-content-center w-[340px] lg:w-[500px] bg-white">
+    <main className="m-5 font-[Montserrat] p-3 rounded-2xl shadow-2xl place-content-center w-[340px] lg:w-[500px] bg-white">
+      <Datepicker className="absolute top-6 left-6 w-[170px]"/>
       <div className="flex flex-col place-content-center items-center mb-3">
         <h1 className="bg-slate-500 text-white text-xl flex w-[100%] place-content-center py-2 px-4 rounded-2xl mr-2">
           App de gatitos
         </h1>
-        <Button color="dark" onClick={handleClick} className="px-5 py-1 mt-3">Get new fact!</Button>
-
-
+        <Button color="dark" onClick={handleClick} className="px-5 py-1 mt-3">
+          Get new fact!
+        </Button>
       </div>
       {loading ? (
         <div className="flex justify-center my-20">
           <Spinner aria-label="Extra large spinner example" size="xl" />
         </div>
-      
-
       ) : (
         <>
           <p className="italic mb-3 text-center">{fact}</p>
