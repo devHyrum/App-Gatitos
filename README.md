@@ -14,6 +14,7 @@ Este é um aplicativo simples desenvolvido em React que exibe fatos aleatórios 
 - **Hooks personalizados**: `useCatFact` e `useCatImage` para lógica de busca e gerenciamento de estado.
 - **API**: Consumo da API `catfact.ninja` para obter fatos sobre gatos.
 - **Tailwind CSS**: Utilizado para estilização da interface.
+- **Flowbite React**: Utilizado para componentes de estilização prontos.
 
 ## Instalación
 
