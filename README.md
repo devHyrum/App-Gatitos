@@ -1,5 +1,6 @@
 # Cat Facts App
 ![desktopDesign](./src/assets/desktopDesign.png)
+
 Este é um aplicativo simples desenvolvido em React que exibe fatos aleatórios sobre gatos e imagens correspondentes. A aplicação consome uma API pública para obter os fatos e utiliza outra API para gerar imagens de gatos com base nos primeiros três termos do fato obtido.
 
 ## Funcionalidades
