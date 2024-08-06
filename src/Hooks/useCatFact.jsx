@@ -9,6 +9,7 @@ export function useCatFact() {
   };
 
   useEffect(refreshFact, []);
+  if (!fact ) return <div>Carregando...</div>;
 
   return { fact, refreshFact };
 }
